@@ -16,12 +16,39 @@
 		C6674485193656AA000293D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6674483193656AA000293D4 /* Main.storyboard */; };
 		C6674488193656AA000293D4 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6674487193656AA000293D4 /* FirstViewController.m */; };
 		C667448B193656AA000293D4 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C667448A193656AA000293D4 /* SecondViewController.m */; };
-		C667448D193656AA000293D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C667448C193656AA000293D4 /* Images.xcassets */; };
 		C6674494193656AA000293D4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6674493193656AA000293D4 /* XCTest.framework */; };
 		C6674495193656AA000293D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6674471193656AA000293D4 /* Foundation.framework */; };
 		C6674496193656AA000293D4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6674475193656AA000293D4 /* UIKit.framework */; };
 		C667449E193656AA000293D4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C667449C193656AA000293D4 /* InfoPlist.strings */; };
 		C66744A0193656AA000293D4 /* Windy_HeadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C667449F193656AA000293D4 /* Windy_HeadTests.m */; };
+		C66744AA193656B8000293D4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66744A9193656B8000293D4 /* CoreLocation.framework */; };
+		C66744AC193656BE000293D4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66744AB193656BE000293D4 /* CoreData.framework */; };
+		C66744AE193656C8000293D4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66744AD193656C8000293D4 /* MapKit.framework */; };
+		C66744B119365715000293D4 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66744B019365715000293D4 /* WeatherViewController.m */; };
+		C66744B41936574A000293D4 /* MapsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66744B31936574A000293D4 /* MapsViewController.m */; };
+		C66744B919365B53000293D4 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C66744B819365B53000293D4 /* Images-2.xcassets */; };
+		C66744C719365C72000293D4 /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = C66744C319365C72000293D4 /* clock.png */; };
+		C66744C819365C72000293D4 /* cog.png in Resources */ = {isa = PBXBuildFile; fileRef = C66744C419365C72000293D4 /* cog.png */; };
+		C66744C919365C72000293D4 /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = C66744C519365C72000293D4 /* fire.png */; };
+		C66744CA19365C72000293D4 /* globe.png in Resources */ = {isa = PBXBuildFile; fileRef = C66744C619365C72000293D4 /* globe.png */; };
+		C66744CC193661D1000293D4 /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = C66744CB193661D1000293D4 /* sun.png */; };
+		C66744EE193668C1000293D4 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C66744D4193668C1000293D4 /* AFHTTPRequestOperation.m */; };
+		C66744EF193668C1000293D4 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C66744D6193668C1000293D4 /* AFHTTPRequestOperationManager.m */; };
+		C66744F0193668C1000293D4 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C66744D8193668C1000293D4 /* AFHTTPSessionManager.m */; };
+		C66744F1193668C1000293D4 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C66744DB193668C1000293D4 /* AFNetworkReachabilityManager.m */; };
+		C66744F2193668C1000293D4 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = C66744DD193668C1000293D4 /* AFSecurityPolicy.m */; };
+		C66744F3193668C1000293D4 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C66744DF193668C1000293D4 /* AFURLConnectionOperation.m */; };
+		C66744F4193668C1000293D4 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C66744E1193668C1000293D4 /* AFURLRequestSerialization.m */; };
+		C66744F5193668C1000293D4 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C66744E3193668C1000293D4 /* AFURLResponseSerialization.m */; };
+		C66744F6193668C1000293D4 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C66744E5193668C1000293D4 /* AFURLSessionManager.m */; };
+		C66744F7193668C1000293D4 /* Forecastr+CLLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = C66744E8193668C1000293D4 /* Forecastr+CLLocation.m */; };
+		C66744F8193668C1000293D4 /* Forecastr.m in Sources */ = {isa = PBXBuildFile; fileRef = C66744EA193668C1000293D4 /* Forecastr.m */; };
+		C66744F9193668C1000293D4 /* ForecastrAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C66744EC193668C1000293D4 /* ForecastrAPIClient.m */; };
+		C66744FA193668C1000293D4 /* ForecastrUnits.plist in Resources */ = {isa = PBXBuildFile; fileRef = C66744ED193668C1000293D4 /* ForecastrUnits.plist */; };
+		C68F25DE1937257500B6940D /* weather_background.JPG in Resources */ = {isa = PBXBuildFile; fileRef = C68F25DD1937257500B6940D /* weather_background.JPG */; };
+		C6EFCE4E1936B455002F8831 /* clock2.png in Resources */ = {isa = PBXBuildFile; fileRef = C6EFCE4B1936B454002F8831 /* clock2.png */; };
+		C6EFCE4F1936B455002F8831 /* cog2.png in Resources */ = {isa = PBXBuildFile; fileRef = C6EFCE4C1936B454002F8831 /* cog2.png */; };
+		C6EFCE501936B455002F8831 /* globe2.png in Resources */ = {isa = PBXBuildFile; fileRef = C6EFCE4D1936B454002F8831 /* globe2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,12 +77,54 @@
 		C6674487193656AA000293D4 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		C6674489193656AA000293D4 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		C667448A193656AA000293D4 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		C667448C193656AA000293D4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C6674492193656AA000293D4 /* Windy HeadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Windy HeadTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6674493193656AA000293D4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C667449B193656AA000293D4 /* Windy HeadTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Windy HeadTests-Info.plist"; sourceTree = "<group>"; };
 		C667449D193656AA000293D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C667449F193656AA000293D4 /* Windy_HeadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Windy_HeadTests.m; sourceTree = "<group>"; };
+		C66744A9193656B8000293D4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C66744AB193656BE000293D4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C66744AD193656C8000293D4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C66744AF19365715000293D4 /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
+		C66744B019365715000293D4 /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
+		C66744B21936574A000293D4 /* MapsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapsViewController.h; sourceTree = "<group>"; };
+		C66744B31936574A000293D4 /* MapsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapsViewController.m; sourceTree = "<group>"; };
+		C66744B819365B53000293D4 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
+		C66744C319365C72000293D4 /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
+		C66744C419365C72000293D4 /* cog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cog.png; sourceTree = "<group>"; };
+		C66744C519365C72000293D4 /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
+		C66744C619365C72000293D4 /* globe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = globe.png; sourceTree = "<group>"; };
+		C66744CB193661D1000293D4 /* sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sun.png; sourceTree = "<group>"; };
+		C66744D3193668C1000293D4 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		C66744D4193668C1000293D4 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		C66744D5193668C1000293D4 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		C66744D6193668C1000293D4 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		C66744D7193668C1000293D4 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		C66744D8193668C1000293D4 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		C66744D9193668C1000293D4 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		C66744DA193668C1000293D4 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		C66744DB193668C1000293D4 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		C66744DC193668C1000293D4 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		C66744DD193668C1000293D4 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		C66744DE193668C1000293D4 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		C66744DF193668C1000293D4 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		C66744E0193668C1000293D4 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		C66744E1193668C1000293D4 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		C66744E2193668C1000293D4 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		C66744E3193668C1000293D4 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		C66744E4193668C1000293D4 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		C66744E5193668C1000293D4 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		C66744E7193668C1000293D4 /* Forecastr+CLLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Forecastr+CLLocation.h"; sourceTree = "<group>"; };
+		C66744E8193668C1000293D4 /* Forecastr+CLLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Forecastr+CLLocation.m"; sourceTree = "<group>"; };
+		C66744E9193668C1000293D4 /* Forecastr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Forecastr.h; sourceTree = "<group>"; };
+		C66744EA193668C1000293D4 /* Forecastr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Forecastr.m; sourceTree = "<group>"; };
+		C66744EB193668C1000293D4 /* ForecastrAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForecastrAPIClient.h; sourceTree = "<group>"; };
+		C66744EC193668C1000293D4 /* ForecastrAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForecastrAPIClient.m; sourceTree = "<group>"; };
+		C66744ED193668C1000293D4 /* ForecastrUnits.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ForecastrUnits.plist; sourceTree = "<group>"; };
+		C68F25DD1937257500B6940D /* weather_background.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = weather_background.JPG; sourceTree = "<group>"; };
+		C6EFCE4B1936B454002F8831 /* clock2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock2.png; sourceTree = "<group>"; };
+		C6EFCE4C1936B454002F8831 /* cog2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cog2.png; sourceTree = "<group>"; };
+		C6EFCE4D1936B454002F8831 /* globe2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = globe2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +132,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C66744AE193656C8000293D4 /* MapKit.framework in Frameworks */,
+				C66744AC193656BE000293D4 /* CoreData.framework in Frameworks */,
+				C66744AA193656B8000293D4 /* CoreLocation.framework in Frameworks */,
 				C6674474193656AA000293D4 /* CoreGraphics.framework in Frameworks */,
 				C6674476193656AA000293D4 /* UIKit.framework in Frameworks */,
 				C6674472193656AA000293D4 /* Foundation.framework in Frameworks */,
@@ -104,6 +176,10 @@
 		C6674470193656AA000293D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C66744CD19366363000293D4 /* Forecastr API */,
+				C66744AD193656C8000293D4 /* MapKit.framework */,
+				C66744AB193656BE000293D4 /* CoreData.framework */,
+				C66744A9193656B8000293D4 /* CoreLocation.framework */,
 				C6674471193656AA000293D4 /* Foundation.framework */,
 				C6674473193656AA000293D4 /* CoreGraphics.framework */,
 				C6674475193656AA000293D4 /* UIKit.framework */,
@@ -115,14 +191,19 @@
 		C6674477193656AA000293D4 /* Windy Head */ = {
 			isa = PBXGroup;
 			children = (
+				C66744BA19365BA6000293D4 /* Assets */,
+				C6674483193656AA000293D4 /* Main.storyboard */,
+				C66744B21936574A000293D4 /* MapsViewController.h */,
+				C66744B31936574A000293D4 /* MapsViewController.m */,
 				C6674480193656AA000293D4 /* AppDelegate.h */,
 				C6674481193656AA000293D4 /* AppDelegate.m */,
-				C6674483193656AA000293D4 /* Main.storyboard */,
+				C66744AF19365715000293D4 /* WeatherViewController.h */,
+				C66744B019365715000293D4 /* WeatherViewController.m */,
 				C6674486193656AA000293D4 /* FirstViewController.h */,
 				C6674487193656AA000293D4 /* FirstViewController.m */,
 				C6674489193656AA000293D4 /* SecondViewController.h */,
 				C667448A193656AA000293D4 /* SecondViewController.m */,
-				C667448C193656AA000293D4 /* Images.xcassets */,
+				C66744B819365B53000293D4 /* Images-2.xcassets */,
 				C6674478193656AA000293D4 /* Supporting Files */,
 			);
 			path = "Windy Head";
@@ -155,6 +236,71 @@
 				C667449C193656AA000293D4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C66744BA19365BA6000293D4 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C68F25DD1937257500B6940D /* weather_background.JPG */,
+				C6EFCE4B1936B454002F8831 /* clock2.png */,
+				C6EFCE4C1936B454002F8831 /* cog2.png */,
+				C6EFCE4D1936B454002F8831 /* globe2.png */,
+				C66744CB193661D1000293D4 /* sun.png */,
+				C66744C319365C72000293D4 /* clock.png */,
+				C66744C419365C72000293D4 /* cog.png */,
+				C66744C519365C72000293D4 /* fire.png */,
+				C66744C619365C72000293D4 /* globe.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		C66744CD19366363000293D4 /* Forecastr API */ = {
+			isa = PBXGroup;
+			children = (
+				C66744D2193668C1000293D4 /* AFNetworking */,
+				C66744E6193668C1000293D4 /* Forecastr */,
+			);
+			name = "Forecastr API";
+			sourceTree = "<group>";
+		};
+		C66744D2193668C1000293D4 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				C66744D3193668C1000293D4 /* AFHTTPRequestOperation.h */,
+				C66744D4193668C1000293D4 /* AFHTTPRequestOperation.m */,
+				C66744D5193668C1000293D4 /* AFHTTPRequestOperationManager.h */,
+				C66744D6193668C1000293D4 /* AFHTTPRequestOperationManager.m */,
+				C66744D7193668C1000293D4 /* AFHTTPSessionManager.h */,
+				C66744D8193668C1000293D4 /* AFHTTPSessionManager.m */,
+				C66744D9193668C1000293D4 /* AFNetworking.h */,
+				C66744DA193668C1000293D4 /* AFNetworkReachabilityManager.h */,
+				C66744DB193668C1000293D4 /* AFNetworkReachabilityManager.m */,
+				C66744DC193668C1000293D4 /* AFSecurityPolicy.h */,
+				C66744DD193668C1000293D4 /* AFSecurityPolicy.m */,
+				C66744DE193668C1000293D4 /* AFURLConnectionOperation.h */,
+				C66744DF193668C1000293D4 /* AFURLConnectionOperation.m */,
+				C66744E0193668C1000293D4 /* AFURLRequestSerialization.h */,
+				C66744E1193668C1000293D4 /* AFURLRequestSerialization.m */,
+				C66744E2193668C1000293D4 /* AFURLResponseSerialization.h */,
+				C66744E3193668C1000293D4 /* AFURLResponseSerialization.m */,
+				C66744E4193668C1000293D4 /* AFURLSessionManager.h */,
+				C66744E5193668C1000293D4 /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		C66744E6193668C1000293D4 /* Forecastr */ = {
+			isa = PBXGroup;
+			children = (
+				C66744E7193668C1000293D4 /* Forecastr+CLLocation.h */,
+				C66744E8193668C1000293D4 /* Forecastr+CLLocation.m */,
+				C66744E9193668C1000293D4 /* Forecastr.h */,
+				C66744EA193668C1000293D4 /* Forecastr.m */,
+				C66744EB193668C1000293D4 /* ForecastrAPIClient.h */,
+				C66744EC193668C1000293D4 /* ForecastrAPIClient.m */,
+				C66744ED193668C1000293D4 /* ForecastrUnits.plist */,
+			);
+			path = Forecastr;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +350,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "ISCTE-IUL";
 				TargetAttributes = {
+					C667446D193656AA000293D4 = {
+						DevelopmentTeam = C8GUD5SH97;
+					};
 					C6674491193656AA000293D4 = {
 						TestTargetID = C667446D193656AA000293D4;
 					};
@@ -233,9 +382,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C667448D193656AA000293D4 /* Images.xcassets in Resources */,
+				C68F25DE1937257500B6940D /* weather_background.JPG in Resources */,
+				C66744CC193661D1000293D4 /* sun.png in Resources */,
+				C66744C819365C72000293D4 /* cog.png in Resources */,
+				C66744CA19365C72000293D4 /* globe.png in Resources */,
+				C66744C719365C72000293D4 /* clock.png in Resources */,
+				C66744B919365B53000293D4 /* Images-2.xcassets in Resources */,
+				C6EFCE4F1936B455002F8831 /* cog2.png in Resources */,
+				C6EFCE501936B455002F8831 /* globe2.png in Resources */,
+				C6EFCE4E1936B455002F8831 /* clock2.png in Resources */,
 				C667447C193656AA000293D4 /* InfoPlist.strings in Resources */,
 				C6674485193656AA000293D4 /* Main.storyboard in Resources */,
+				C66744C919365C72000293D4 /* fire.png in Resources */,
+				C66744FA193668C1000293D4 /* ForecastrUnits.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,10 +413,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C66744F6193668C1000293D4 /* AFURLSessionManager.m in Sources */,
 				C667448B193656AA000293D4 /* SecondViewController.m in Sources */,
 				C6674482193656AA000293D4 /* AppDelegate.m in Sources */,
+				C66744F1193668C1000293D4 /* AFNetworkReachabilityManager.m in Sources */,
 				C6674488193656AA000293D4 /* FirstViewController.m in Sources */,
+				C66744F3193668C1000293D4 /* AFURLConnectionOperation.m in Sources */,
+				C66744F8193668C1000293D4 /* Forecastr.m in Sources */,
+				C66744F0193668C1000293D4 /* AFHTTPSessionManager.m in Sources */,
+				C66744F4193668C1000293D4 /* AFURLRequestSerialization.m in Sources */,
+				C66744B119365715000293D4 /* WeatherViewController.m in Sources */,
 				C667447E193656AA000293D4 /* main.m in Sources */,
+				C66744B41936574A000293D4 /* MapsViewController.m in Sources */,
+				C66744EF193668C1000293D4 /* AFHTTPRequestOperationManager.m in Sources */,
+				C66744F2193668C1000293D4 /* AFSecurityPolicy.m in Sources */,
+				C66744F7193668C1000293D4 /* Forecastr+CLLocation.m in Sources */,
+				C66744F5193668C1000293D4 /* AFURLResponseSerialization.m in Sources */,
+				C66744EE193668C1000293D4 /* AFHTTPRequestOperation.m in Sources */,
+				C66744F9193668C1000293D4 /* ForecastrAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,12 +555,19 @@
 		C66744A4193656AA000293D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COMPRESS_PNG_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Windy Head/Windy Head-Prefix.pch";
 				INFOPLIST_FILE = "Windy Head/Windy Head-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				TARGETED_DEVICE_FAMILY = 2;
+				USER_HEADER_SEARCH_PATHS = "/Users/vascopatricio/Desktop/DAAM/Windy Head/AFNetworking/** /Users/vascopatricio/Desktop/DAAM/Windy Head/Forecastr";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -395,12 +575,19 @@
 		C66744A5193656AA000293D4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COMPRESS_PNG_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Windy Head/Windy Head-Prefix.pch";
 				INFOPLIST_FILE = "Windy Head/Windy Head-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				TARGETED_DEVICE_FAMILY = 2;
+				USER_HEADER_SEARCH_PATHS = "/Users/vascopatricio/Desktop/DAAM/Windy Head/AFNetworking/** /Users/vascopatricio/Desktop/DAAM/Windy Head/Forecastr";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -464,6 +651,7 @@
 				C66744A5193656AA000293D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C66744A6193656AA000293D4 /* Build configuration list for PBXNativeTarget "Windy HeadTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +660,7 @@
 				C66744A8193656AA000293D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
