@@ -14,7 +14,6 @@
 @end
 
 
-
 @implementation WeatherViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -27,6 +26,18 @@
     return self;
 }
 
+- (void) Notifications {
+    
+    
+    UILocalNotification* notification = [[UILocalNotification alloc]init];
+    notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:5];
+    notification.alertAction = @"Windy Head";
+    notification.alertBody = @"Don't forget to check your tasks!";
+    notification.timeZone = [NSTimeZone defaultTimeZone];
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+}
+
 - (IBAction)getForecast:(id)sender {
     
     CLLocation* location;
@@ -34,6 +45,7 @@
     forecast.apiKey = @"98e0ab45fa7d9dff386046ed2f6f614c";
     forecast.cacheExpirationInMinutes = 5;
     forecast.units = @"ca";
+    
     
     [forecast getForecastForLocation:location time:nil exclusions:nil extend:nil success:^(id JSON)
     {
@@ -44,18 +56,16 @@
     }
      ];
     
+    
     UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Location and Weather Data"
                                                     message:[NSString stringWithFormat:@"%@",forecast]
                                                    delegate:nil
-                                          cancelButtonTitle:@"Nice"
+                                          cancelButtonTitle:@"Ok"
                                           otherButtonTitles:nil];
     
     
     [alert show];
-    
-
 }
-
 
 - (void)viewDidLoad
 {
@@ -63,9 +73,8 @@
     
     // Do any additional setup after loading the view.
     
-    
-    
 }
+
 
 - (void)didReceiveMemoryWarning
 {

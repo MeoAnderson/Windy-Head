@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -74,6 +75,7 @@
                 <splitViewController id="EZL-6O-IIN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Tasks" image="clock.png" id="YG9-F8-qzk"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Big-hk-hCc"/>
                     <connections>
                         <segue destination="cSS-i3-xAa" kind="relationship" relationship="masterViewController" id="VTJ-qF-ek2"/>
                         <segue destination="vlv-ur-VJ3" kind="relationship" relationship="detailViewController" id="qD3-3q-DS9"/>
@@ -86,7 +88,7 @@
         <!--Weather View Controller - Weather-->
         <scene sceneID="bxB-ah-lMV">
             <objects>
-                <viewController id="FPU-kx-4O2" customClass="WeatherViewController" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="FPU-kx-4O2" customClass="WeatherViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="alA-7R-dxj"/>
                         <viewControllerLayoutGuide type="bottom" id="zlz-or-fQb"/>
@@ -95,26 +97,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="weather_background.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="ZIB-rH-mD1">
-                                <rect key="frame" x="-192" y="0.0" width="1206" height="1024"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PUZ-t3-EgQ">
-                                <rect key="frame" x="361" y="101" width="46" height="30"/>
+                                <rect key="frame" x="314" y="867" width="194" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Update Weather Information">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="getForecast:" destination="FPU-kx-4O2" eventType="touchUpInside" id="SzU-Ml-9HJ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rc0-aj-76C">
+                                <rect key="frame" x="67" y="214" width="61" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="temperature" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3g-Ws-FyI">
+                                <rect key="frame" x="67" y="330" width="94" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="max" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RvD-fJ-QKx">
+                                <rect key="frame" x="96" y="359" width="33" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="min" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ak-ij-2Oz">
+                                <rect key="frame" x="96" y="388" width="28" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="state" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjq-qd-NFC">
+                                <rect key="frame" x="67" y="266" width="38" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="windspeed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXN-j6-FLE">
+                                <rect key="frame" x="67" y="447" width="84" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ffl-1E-XZP">
+                                <rect key="frame" x="67" y="516" width="34" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Weather" image="fire.png" id="c9c-mY-KIc"/>
+                    <tabBarItem key="tabBarItem" title="Weather" image="weather.png" id="c9c-mY-KIc"/>
+                    <navigationItem key="navigationItem" id="MQu-Np-7Zs"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dK8-Y9-bvG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -124,57 +165,69 @@
         <!--First View Controller - Maps-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="9pv-A4-QxB" customClass="FirstViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QHu-SD-J7m"/>
-                        <viewControllerLayoutGuide type="bottom" id="oW5-Vs-Ofr"/>
+                        <viewControllerLayoutGuide type="top" id="evQ-ME-Vvb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2mc-XP-eTg"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8nt-ns-3jD">
+                    <view key="view" contentMode="scaleToFill" id="XDB-O3-VGS">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PqW-rZ-05q" userLabel="mapView">
-                                <rect key="frame" x="0.0" y="93" width="790" height="931"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="_mapView" mapType="hybrid" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d4a-Cf-izo" userLabel="_mapView">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
-                                    <outlet property="delegate" destination="EE0-68-pdY" id="1FD-f4-cog"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="Lx7-VH-VAM"/>
                                 </connections>
                             </mapView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="What are you looking for?" showsSearchResultsButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kCp-E6-h8h" userLabel="Search Bar">
-                                <rect key="frame" x="0.0" y="93" width="768" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="_searchBar" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What are you looking for?" textAlignment="center" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5mx-hz-5XW" userLabel="_searchBar">
+                                <rect key="frame" x="239" y="65" width="291" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" searchField="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="291" id="sWg-f7-yTJ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
-                                    <outlet property="delegate" destination="EE0-68-pdY" id="2qq-8P-vWQ"/>
+                                    <action selector="searchBox:" destination="9pv-A4-QxB" eventType="editingDidEndOnExit" id="Q89-P9-SUQ"/>
+                                    <action selector="searchBox:" destination="9pv-A4-QxB" eventType="editingDidEnd" id="icz-h6-aSV"/>
                                 </connections>
-                            </searchBar>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="d4a-Cf-izo" firstAttribute="top" secondItem="XDB-O3-VGS" secondAttribute="top" id="Is7-Cv-W8x"/>
+                            <constraint firstAttribute="centerX" secondItem="5mx-hz-5XW" secondAttribute="centerX" constant="-0.5" id="Kj3-xc-hM3"/>
+                            <constraint firstItem="2mc-XP-eTg" firstAttribute="top" secondItem="5mx-hz-5XW" secondAttribute="bottom" constant="880" id="Lte-uc-b3Y"/>
+                            <constraint firstAttribute="width" secondItem="d4a-Cf-izo" secondAttribute="height" multiplier="3:4" id="Qhu-JZ-f5J"/>
+                            <constraint firstAttribute="height" secondItem="d4a-Cf-izo" secondAttribute="height" id="qfV-vp-kkf"/>
+                            <constraint firstAttribute="width" secondItem="d4a-Cf-izo" secondAttribute="width" id="r8P-Eq-X84"/>
+                            <constraint firstItem="d4a-Cf-izo" firstAttribute="leading" secondItem="XDB-O3-VGS" secondAttribute="leading" id="rCZ-qF-IXj"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Maps" image="globe.png" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Maps" image="globe.png" id="DR9-JZ-B9N"/>
+                    <navigationItem key="navigationItem" id="DMz-V9-Wu9"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <size key="freeformSize" width="768" height="1024"/>
                     <connections>
-                        <outlet property="searchDisplayController" destination="EE0-68-pdY" id="Q6Q-JU-RxQ"/>
+                        <outlet property="mapView" destination="d4a-Cf-izo" id="PAr-1K-nLn"/>
+                        <outlet property="searchBar" destination="5mx-hz-5XW" id="rlx-tS-aQh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="EE0-68-pdY">
-                    <connections>
-                        <outlet property="delegate" destination="9pv-A4-QxB" id="lVK-CQ-blx"/>
-                        <outlet property="searchBar" destination="kCp-E6-h8h" id="BUV-rI-lmS"/>
-                        <outlet property="searchContentsController" destination="9pv-A4-QxB" id="FIi-92-OcS"/>
-                        <outlet property="searchResultsDataSource" destination="9pv-A4-QxB" id="6tm-7f-g5g"/>
-                        <outlet property="searchResultsDelegate" destination="9pv-A4-QxB" id="fsj-zB-mhP"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="3041" y="150"/>
         </scene>
         <!--Second View Controller - About-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="8rJ-Kc-sve" customClass="SecondViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZXQ-6P-xwx"/>
                         <viewControllerLayoutGuide type="bottom" id="C3a-p1-rS8"/>
@@ -183,28 +236,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ej5-n5-O85">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about.png" translatesAutoresizingMaskIntoConstraints="NO" id="BUB-VR-hhs">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <navigationBar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ej5-n5-O85">
+                                <rect key="frame" x="0.0" y="0.0" width="769" height="44"/>
                                 <items>
                                     <navigationItem id="WaP-O7-m87"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="An application developed for" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6p-yu-89a">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An application developed for" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6p-yu-89a">
                                 <rect key="frame" x="274" y="457" width="221" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="221" id="zRi-k2-X2K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mobile Applications Development" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKv-HP-47o">
-                                <rect key="frame" x="226" y="486" width="621" height="51"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile Applications Development" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKv-HP-47o">
+                                <rect key="frame" x="229" y="486" width="621" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="8NM-TD-p08"/>
+                                    <constraint firstAttribute="width" constant="621" id="pXW-XD-Nz3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="21"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Vasco Patrício" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvW-09-ypN">
+                                <rect key="frame" x="324" y="545" width="121" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BUB-VR-hhs" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="3:4" id="0IL-SP-0E0"/>
+                            <constraint firstItem="lKv-HP-47o" firstAttribute="top" secondItem="z6p-yu-89a" secondAttribute="bottom" constant="8" symbolic="YES" id="0Mz-Am-xlS"/>
+                            <constraint firstAttribute="trailing" secondItem="lKv-HP-47o" secondAttribute="trailing" constant="-82" id="0Wc-1I-3CK"/>
+                            <constraint firstAttribute="centerY" secondItem="tvW-09-ypN" secondAttribute="centerY" constant="-43.5" id="6gQ-9U-Y23"/>
+                            <constraint firstAttribute="centerX" secondItem="z6p-yu-89a" secondAttribute="centerX" constant="-0.5" id="7uK-qW-Xg6"/>
+                            <constraint firstAttribute="centerX" secondItem="BUB-VR-hhs" secondAttribute="centerX" id="MeY-yD-sjC"/>
+                            <constraint firstItem="ej5-n5-O85" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" id="Z4E-1o-Awr"/>
+                            <constraint firstItem="C3a-p1-rS8" firstAttribute="top" secondItem="BUB-VR-hhs" secondAttribute="bottom" constant="-49" id="ZT1-VS-nvg"/>
+                            <constraint firstItem="BUB-VR-hhs" firstAttribute="top" secondItem="ZXQ-6P-xwx" secondAttribute="bottom" constant="-94" id="Zd2-t3-2av"/>
+                            <constraint firstAttribute="centerY" secondItem="BUB-VR-hhs" secondAttribute="centerY" id="gvQ-Mr-OBl"/>
+                            <constraint firstAttribute="centerX" secondItem="BUB-VR-hhs" secondAttribute="centerX" id="k2X-eb-Idv"/>
+                            <constraint firstItem="ej5-n5-O85" firstAttribute="centerX" secondItem="tvW-09-ypN" secondAttribute="centerX" id="kcG-bg-CMp"/>
+                            <constraint firstAttribute="centerY" secondItem="BUB-VR-hhs" secondAttribute="centerY" id="mHh-TY-znI"/>
+                            <constraint firstItem="ej5-n5-O85" firstAttribute="leading" secondItem="BUB-VR-hhs" secondAttribute="leading" id="p1f-B2-EbI"/>
+                            <constraint firstItem="z6p-yu-89a" firstAttribute="top" secondItem="ZXQ-6P-xwx" secondAttribute="bottom" constant="363" id="xPI-69-c2y"/>
+                            <constraint firstItem="ej5-n5-O85" firstAttribute="top" secondItem="BUB-VR-hhs" secondAttribute="top" id="y6Y-ua-7g3"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="cog.png" id="cPa-gy-q4n"/>
+                    <navigationItem key="navigationItem" id="YTh-RA-khU"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -215,8 +305,9 @@
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController title="Tasks" id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleAspectFit" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -235,11 +326,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="about.png" width="1536" height="2048"/>
         <image name="clock.png" width="26" height="26"/>
         <image name="cog.png" width="26" height="26"/>
-        <image name="fire.png" width="26" height="26"/>
         <image name="globe.png" width="26" height="26"/>
-        <image name="weather_background.JPG" width="2048" height="2048"/>
+        <image name="weather.png" width="26" height="26"/>
     </resources>
     <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

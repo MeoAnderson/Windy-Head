@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController <CLLocationManagerDelegate>
+
+@property (strong, nonatomic) IBOutlet UITextField *textField;
+-(IBAction)textFieldReturn:(id)sender;
+
+@property (nonatomic, assign) MKCoordinateRegion boundingRegion;
+@property (nonatomic, assign) NSArray* mapItems;
+@property (strong, nonatomic) IBOutlet UITextField *searchBar;
+
+//@property (weak, nonatomic) IBOutlet UITextField *searchBar;
+//@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+
 
 @end

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C61D53C119410AE900F3191A /* weather.png in Resources */ = {isa = PBXBuildFile; fileRef = C61D53C019410AE900F3191A /* weather.png */; };
+		C61D53C319410EF900F3191A /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = C61D53C219410EF900F3191A /* about.png */; };
+		C62E32BE193FC102006FDF48 /* windyhead_landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = C62E32BC193FC102006FDF48 /* windyhead_landscape.png */; };
+		C62E32BF193FC102006FDF48 /* windyhead_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = C62E32BD193FC102006FDF48 /* windyhead_portrait.png */; };
 		C6674472193656AA000293D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6674471193656AA000293D4 /* Foundation.framework */; };
 		C6674474193656AA000293D4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6674473193656AA000293D4 /* CoreGraphics.framework */; };
 		C6674476193656AA000293D4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6674475193656AA000293D4 /* UIKit.framework */; };
@@ -25,7 +29,6 @@
 		C66744AC193656BE000293D4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66744AB193656BE000293D4 /* CoreData.framework */; };
 		C66744AE193656C8000293D4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66744AD193656C8000293D4 /* MapKit.framework */; };
 		C66744B119365715000293D4 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66744B019365715000293D4 /* WeatherViewController.m */; };
-		C66744B41936574A000293D4 /* MapsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66744B31936574A000293D4 /* MapsViewController.m */; };
 		C66744B919365B53000293D4 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C66744B819365B53000293D4 /* Images-2.xcassets */; };
 		C66744C719365C72000293D4 /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = C66744C319365C72000293D4 /* clock.png */; };
 		C66744C819365C72000293D4 /* cog.png in Resources */ = {isa = PBXBuildFile; fileRef = C66744C419365C72000293D4 /* cog.png */; };
@@ -45,7 +48,6 @@
 		C66744F8193668C1000293D4 /* Forecastr.m in Sources */ = {isa = PBXBuildFile; fileRef = C66744EA193668C1000293D4 /* Forecastr.m */; };
 		C66744F9193668C1000293D4 /* ForecastrAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C66744EC193668C1000293D4 /* ForecastrAPIClient.m */; };
 		C66744FA193668C1000293D4 /* ForecastrUnits.plist in Resources */ = {isa = PBXBuildFile; fileRef = C66744ED193668C1000293D4 /* ForecastrUnits.plist */; };
-		C68F25DE1937257500B6940D /* weather_background.JPG in Resources */ = {isa = PBXBuildFile; fileRef = C68F25DD1937257500B6940D /* weather_background.JPG */; };
 		C6EFCE4E1936B455002F8831 /* clock2.png in Resources */ = {isa = PBXBuildFile; fileRef = C6EFCE4B1936B454002F8831 /* clock2.png */; };
 		C6EFCE4F1936B455002F8831 /* cog2.png in Resources */ = {isa = PBXBuildFile; fileRef = C6EFCE4C1936B454002F8831 /* cog2.png */; };
 		C6EFCE501936B455002F8831 /* globe2.png in Resources */ = {isa = PBXBuildFile; fileRef = C6EFCE4D1936B454002F8831 /* globe2.png */; };
@@ -62,6 +64,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C61D53C019410AE900F3191A /* weather.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weather.png; sourceTree = "<group>"; };
+		C61D53C219410EF900F3191A /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about.png; sourceTree = "<group>"; };
+		C62E32BC193FC102006FDF48 /* windyhead_landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = windyhead_landscape.png; sourceTree = "<group>"; };
+		C62E32BD193FC102006FDF48 /* windyhead_portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = windyhead_portrait.png; sourceTree = "<group>"; };
 		C667446E193656AA000293D4 /* Windy Head.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Windy Head.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6674471193656AA000293D4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C6674473193656AA000293D4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -87,8 +93,6 @@
 		C66744AD193656C8000293D4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C66744AF19365715000293D4 /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
 		C66744B019365715000293D4 /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
-		C66744B21936574A000293D4 /* MapsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapsViewController.h; sourceTree = "<group>"; };
-		C66744B31936574A000293D4 /* MapsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapsViewController.m; sourceTree = "<group>"; };
 		C66744B819365B53000293D4 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		C66744C319365C72000293D4 /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
 		C66744C419365C72000293D4 /* cog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cog.png; sourceTree = "<group>"; };
@@ -121,7 +125,6 @@
 		C66744EB193668C1000293D4 /* ForecastrAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForecastrAPIClient.h; sourceTree = "<group>"; };
 		C66744EC193668C1000293D4 /* ForecastrAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForecastrAPIClient.m; sourceTree = "<group>"; };
 		C66744ED193668C1000293D4 /* ForecastrUnits.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ForecastrUnits.plist; sourceTree = "<group>"; };
-		C68F25DD1937257500B6940D /* weather_background.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = weather_background.JPG; sourceTree = "<group>"; };
 		C6EFCE4B1936B454002F8831 /* clock2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock2.png; sourceTree = "<group>"; };
 		C6EFCE4C1936B454002F8831 /* cog2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cog2.png; sourceTree = "<group>"; };
 		C6EFCE4D1936B454002F8831 /* globe2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = globe2.png; sourceTree = "<group>"; };
@@ -154,6 +157,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C61D53C719411FCA00F3191A /* Launch Images */ = {
+			isa = PBXGroup;
+			children = (
+				C62E32BC193FC102006FDF48 /* windyhead_landscape.png */,
+				C62E32BD193FC102006FDF48 /* windyhead_portrait.png */,
+			);
+			name = "Launch Images";
+			sourceTree = "<group>";
+		};
+		C61D53C819411FDD00F3191A /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				C61D53C019410AE900F3191A /* weather.png */,
+				C6EFCE4B1936B454002F8831 /* clock2.png */,
+				C6EFCE4C1936B454002F8831 /* cog2.png */,
+				C6EFCE4D1936B454002F8831 /* globe2.png */,
+				C66744CB193661D1000293D4 /* sun.png */,
+				C66744C319365C72000293D4 /* clock.png */,
+				C66744C419365C72000293D4 /* cog.png */,
+				C66744C519365C72000293D4 /* fire.png */,
+				C66744C619365C72000293D4 /* globe.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+		C61D53C919411FE800F3191A /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				C61D53C219410EF900F3191A /* about.png */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
 		C6674465193656A9000293D4 = {
 			isa = PBXGroup;
 			children = (
@@ -193,8 +229,6 @@
 			children = (
 				C66744BA19365BA6000293D4 /* Assets */,
 				C6674483193656AA000293D4 /* Main.storyboard */,
-				C66744B21936574A000293D4 /* MapsViewController.h */,
-				C66744B31936574A000293D4 /* MapsViewController.m */,
 				C6674480193656AA000293D4 /* AppDelegate.h */,
 				C6674481193656AA000293D4 /* AppDelegate.m */,
 				C66744AF19365715000293D4 /* WeatherViewController.h */,
@@ -241,15 +275,9 @@
 		C66744BA19365BA6000293D4 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				C68F25DD1937257500B6940D /* weather_background.JPG */,
-				C6EFCE4B1936B454002F8831 /* clock2.png */,
-				C6EFCE4C1936B454002F8831 /* cog2.png */,
-				C6EFCE4D1936B454002F8831 /* globe2.png */,
-				C66744CB193661D1000293D4 /* sun.png */,
-				C66744C319365C72000293D4 /* clock.png */,
-				C66744C419365C72000293D4 /* cog.png */,
-				C66744C519365C72000293D4 /* fire.png */,
-				C66744C619365C72000293D4 /* globe.png */,
+				C61D53C919411FE800F3191A /* Misc */,
+				C61D53C719411FCA00F3191A /* Launch Images */,
+				C61D53C819411FDD00F3191A /* Icons */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -382,19 +410,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C68F25DE1937257500B6940D /* weather_background.JPG in Resources */,
 				C66744CC193661D1000293D4 /* sun.png in Resources */,
 				C66744C819365C72000293D4 /* cog.png in Resources */,
 				C66744CA19365C72000293D4 /* globe.png in Resources */,
 				C66744C719365C72000293D4 /* clock.png in Resources */,
 				C66744B919365B53000293D4 /* Images-2.xcassets in Resources */,
+				C61D53C319410EF900F3191A /* about.png in Resources */,
 				C6EFCE4F1936B455002F8831 /* cog2.png in Resources */,
 				C6EFCE501936B455002F8831 /* globe2.png in Resources */,
 				C6EFCE4E1936B455002F8831 /* clock2.png in Resources */,
+				C62E32BE193FC102006FDF48 /* windyhead_landscape.png in Resources */,
 				C667447C193656AA000293D4 /* InfoPlist.strings in Resources */,
 				C6674485193656AA000293D4 /* Main.storyboard in Resources */,
 				C66744C919365C72000293D4 /* fire.png in Resources */,
 				C66744FA193668C1000293D4 /* ForecastrUnits.plist in Resources */,
+				C61D53C119410AE900F3191A /* weather.png in Resources */,
+				C62E32BF193FC102006FDF48 /* windyhead_portrait.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +455,6 @@
 				C66744F4193668C1000293D4 /* AFURLRequestSerialization.m in Sources */,
 				C66744B119365715000293D4 /* WeatherViewController.m in Sources */,
 				C667447E193656AA000293D4 /* main.m in Sources */,
-				C66744B41936574A000293D4 /* MapsViewController.m in Sources */,
 				C66744EF193668C1000293D4 /* AFHTTPRequestOperationManager.m in Sources */,
 				C66744F2193668C1000293D4 /* AFSecurityPolicy.m in Sources */,
 				C66744F7193668C1000293D4 /* Forecastr+CLLocation.m in Sources */,
@@ -557,7 +587,6 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -577,7 +606,6 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
