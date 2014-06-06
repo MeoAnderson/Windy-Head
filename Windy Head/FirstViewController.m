@@ -40,10 +40,6 @@
     [locationDetector startUpdatingLocation];
     
     
-    
-    
-    
-    
     //CLLocationCoordinate2D currentLocation = [[[_mapView userLocation] location] coordinate];
     //NSLog(@"You are at: %f %f",currentLocation.latitude,currentLocation.longitude);
 
@@ -58,12 +54,24 @@
     searchRequest.naturalLanguageQuery = _searchBar.text;
     searchRequest.region = _mapView.region;
     
-    MKLocalSearch *search = [[MKLocalSearch alloc] initWithRequest:searchRequest
-                             ];
-    [search startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error) {
+    
+    MKLocalSearch *search = [[MKLocalSearch alloc] initWithRequest:searchRequest];
+    [search startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error)
+    {
         NSLog(@"Map Items: %@", response.mapItems);
         
-         [sender resignFirstResponder];
+        
+        for (MKMapItem *item in response.mapItems)
+        {
+       
+            MKPointAnnotation *annotations = [[MKPointAnnotation alloc]init];
+            annotations.coordinate = item.placemark.coordinate;
+            annotations.title = item.name;
+            [_mapView addAnnotation:annotations];
+        }
+    
+        // To dismiss keyboard and validate
+        [sender resignFirstResponder];
     }];
 }
 
