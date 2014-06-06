@@ -12,9 +12,11 @@ Features:
   - Maps (search of addresses and Points of Interest nearby the current location);
   
   
+
 The weather information is provided by the Forecast.io API, via the Objective-C wrapper Forecastr.
 
 
-Suggestion and bug reports are welcome!
+
+Suggestions and bug reports are welcome!
 
   
