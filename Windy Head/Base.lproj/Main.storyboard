@@ -85,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="2056" y="-4036"/>
         </scene>
-        <!--Weather View Controller - Weather-->
+        <!--Table View Controller - Weather-->
         <scene sceneID="bxB-ah-lMV">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" id="FPU-kx-4O2" customClass="WeatherViewController" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="FPU-kx-4O2" customClass="UITableViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="alA-7R-dxj"/>
                         <viewControllerLayoutGuide type="bottom" id="zlz-or-fQb"/>
@@ -157,6 +157,14 @@
                     <tabBarItem key="tabBarItem" title="Weather" image="weather.png" id="c9c-mY-KIc"/>
                     <navigationItem key="navigationItem" id="MQu-Np-7Zs"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="location" destination="rc0-aj-76C" id="ptG-Hd-t9N"/>
+                        <outlet property="locationWeather" destination="rc0-aj-76C" id="aFq-Ib-uIf"/>
+                        <outlet property="maxTemperature" destination="RvD-fJ-QKx" id="RqD-rX-WVZ"/>
+                        <outlet property="minTemperature" destination="4ak-ij-2Oz" id="MwN-WI-pB6"/>
+                        <outlet property="temperature" destination="y3g-Ws-FyI" id="8fK-CD-ZBf"/>
+                        <outlet property="windSpeed" destination="oXN-j6-FLE" id="6hF-AU-YD5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dK8-Y9-bvG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -307,7 +315,7 @@
                 <tabBarController title="Tasks" id="49e-Tb-3d3" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleAspectFit" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>

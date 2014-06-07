@@ -12,10 +12,25 @@
 #import <ForecastrAPIClient.h>
 #import <CoreLocation/CoreLocation.h>
 
+// test code with  UITableView for weather data
+@interface WeatherViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
-@interface WeatherViewController : UIViewController
+//@property (nonatomic, strong) UITableView* tableView;
 
-{
-}
+
+
+/*
+
+    __weak IBOutlet UILabel *locationWeather;
+    
+    __weak IBOutlet UILabel *temperature;
+    
+    __weak IBOutlet UILabel *maxTemperature;
+    
+    __weak IBOutlet UILabel *minTemperature;
+    
+    __weak IBOutlet UILabel *windSpeed;
+
+*/
 
 @end
