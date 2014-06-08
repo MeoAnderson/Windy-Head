@@ -13,9 +13,11 @@
 #import <CoreLocation/CoreLocation.h>
 
 // test code with  UITableView for weather data
-@interface WeatherViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+@interface WeatherViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
 
-//@property (nonatomic, strong) UITableView* tableView;
+@property (nonatomic, strong) UITableView* tableView;
+@property (nonatomic, strong) UIImageView* weatherBackground;
+@property (nonatomic, assign) CGFloat screenHeight;
 
 
 

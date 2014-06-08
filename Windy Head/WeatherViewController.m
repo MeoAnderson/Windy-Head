@@ -11,7 +11,6 @@
 
 @interface WeatherViewController ()
 
-//@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
@@ -23,60 +22,12 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
     }
     return self;
 }
 
-/*
-- (void) CreateTableView {
-    
-    // Initializing the Table View
-    self.tableView = [[UITableView alloc]init];
-    self.tableView.backgroundColor = [UIColor clearColor];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    self.tableView.separatorColor = [UIColor colorWithWhite:1 alpha:0.2];
-    self.tableView.pagingEnabled = YES;
-    [self.view addSubview:self.tableView];
 
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // TODO: Return count of forecast
-    return 0;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"CellIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    if (! cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
-    }
-    
-    // 3
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.backgroundColor = [UIColor colorWithWhite:0 alpha:0.2];
-    cell.textLabel.textColor = [UIColor whiteColor];
-    cell.detailTextLabel.textColor = [UIColor whiteColor];
-    
-    return cell;
-}
-
-#pragma mark - UITableViewDelegate
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    // TODO: Determine cell height based on screen
-    return 44;
-}
-*/
-
-// Notifications - Still not working as it should, only appear after an event turns it on - TBR
+// Notifications - Still not working as it should, only appear after an event turns them on - TBR
 
 - (void) Notifications {
     
@@ -84,10 +35,11 @@
     UILocalNotification* notification = [[UILocalNotification alloc]init];
     notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:5];
     notification.alertAction = @"Windy Head";
-    notification.alertBody = @"Don't forget to check your tasks!";
+    notification.alertBody = @"Don't forget to check your daily tasks!";
     notification.timeZone = [NSTimeZone defaultTimeZone];
     
     [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+    
 }
 
 
@@ -120,8 +72,6 @@
     
     
     [alert show];
-
-    
 }
 
 
@@ -129,10 +79,73 @@
 {
     [super viewDidLoad];
     
-    // Do any additional setup after loading the view.
+    
+    // Get screen height to configure the tables details
+    self.screenHeight = [UIScreen mainScreen].bounds.size.height;
+    
+    
+    // Adding an image as an background
+    UIImage* background = [UIImage imageNamed:@"weatherBackground.png"];
+    
+    self.weatherBackground = [[UIImageView alloc]initWithImage:background];
+    
+    [self.view addSubview:self.weatherBackground];
+    
+   
+    // Setting up the TableView
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.separatorColor = [UIColor colorWithWhite:1 alpha:0.1];
+    self.tableView.pagingEnabled = YES;
+    [self.view addSubview:self.tableView];
     
 }
 
+// Configuring the UITableView
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
+    
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
+
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *CellIdentifier = @"CellIdentifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (! cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+    }
+    
+    return cell;
+}
+
+
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    // TODO: Determine cell height based on screen
+    return 35;
+
+}
+
+
+
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    
+    CGRect bounds = self.view.bounds;
+    
+    self.weatherBackground.frame = bounds;
+    self.tableView.frame = bounds;
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -140,15 +153,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

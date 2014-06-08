@@ -11,6 +11,7 @@
 		C61D53C319410EF900F3191A /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = C61D53C219410EF900F3191A /* about.png */; };
 		C62E32BE193FC102006FDF48 /* windyhead_landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = C62E32BC193FC102006FDF48 /* windyhead_landscape.png */; };
 		C62E32BF193FC102006FDF48 /* windyhead_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = C62E32BD193FC102006FDF48 /* windyhead_portrait.png */; };
+		C6431DBA1943CC06003FD72B /* weatherBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C6431DB91943CC06003FD72B /* weatherBackground.png */; };
 		C6674472193656AA000293D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6674471193656AA000293D4 /* Foundation.framework */; };
 		C6674474193656AA000293D4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6674473193656AA000293D4 /* CoreGraphics.framework */; };
 		C6674476193656AA000293D4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6674475193656AA000293D4 /* UIKit.framework */; };
@@ -68,6 +69,7 @@
 		C61D53C219410EF900F3191A /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about.png; sourceTree = "<group>"; };
 		C62E32BC193FC102006FDF48 /* windyhead_landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = windyhead_landscape.png; sourceTree = "<group>"; };
 		C62E32BD193FC102006FDF48 /* windyhead_portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = windyhead_portrait.png; sourceTree = "<group>"; };
+		C6431DB91943CC06003FD72B /* weatherBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weatherBackground.png; sourceTree = "<group>"; };
 		C667446E193656AA000293D4 /* Windy Head.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Windy Head.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6674471193656AA000293D4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C6674473193656AA000293D4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -160,6 +162,7 @@
 		C61D53C719411FCA00F3191A /* Launch Images */ = {
 			isa = PBXGroup;
 			children = (
+				C6431DB91943CC06003FD72B /* weatherBackground.png */,
 				C62E32BC193FC102006FDF48 /* windyhead_landscape.png */,
 				C62E32BD193FC102006FDF48 /* windyhead_portrait.png */,
 			);
@@ -424,6 +427,7 @@
 				C6674485193656AA000293D4 /* Main.storyboard in Resources */,
 				C66744C919365C72000293D4 /* fire.png in Resources */,
 				C66744FA193668C1000293D4 /* ForecastrUnits.plist in Resources */,
+				C6431DBA1943CC06003FD72B /* weatherBackground.png in Resources */,
 				C61D53C119410AE900F3191A /* weather.png in Resources */,
 				C62E32BF193FC102006FDF48 /* windyhead_portrait.png in Resources */,
 			);
