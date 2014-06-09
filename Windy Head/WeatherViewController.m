@@ -31,7 +31,6 @@
 
 - (void) Notifications {
     
-    
     UILocalNotification* notification = [[UILocalNotification alloc]init];
     notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:5];
     notification.alertAction = @"Windy Head";
@@ -44,9 +43,11 @@
 
 
 // Event for button "Get Updated Forecast", including user location detection and weather data retrieval
+
 - (IBAction)getForecast:(id)sender {
     
     CLLocation* location;
+    
     Forecastr* forecast = [[Forecastr alloc]init];
     forecast.apiKey = @"98e0ab45fa7d9dff386046ed2f6f614c";
     forecast.cacheExpirationInMinutes = 5;
@@ -72,6 +73,9 @@
     
     
     [alert show];
+    
+
+    
 }
 
 
@@ -131,11 +135,9 @@
 #pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    // TODO: Determine cell height based on screen
+    
     return 35;
-
 }
-
 
 
 - (void)viewWillLayoutSubviews {

@@ -13,7 +13,7 @@
 @interface FirstViewController : UIViewController <CLLocationManagerDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *textField;
-
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic, assign) MKCoordinateRegion boundingRegion;
 @property (nonatomic, assign) NSArray* mapItems;
 @property (strong, nonatomic) IBOutlet UITextField *searchBar;

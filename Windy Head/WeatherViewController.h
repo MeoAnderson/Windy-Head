@@ -11,6 +11,7 @@
 #import <Forecastr+CLLocation.h>
 #import <ForecastrAPIClient.h>
 #import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
 // test code with  UITableView for weather data
 @interface WeatherViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
