@@ -14,26 +14,27 @@
 #import <MapKit/MapKit.h>
 
 // test code with  UITableView for weather data
-@interface WeatherViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
+@interface WeatherViewController : UIViewController
 
-@property (nonatomic, strong) UITableView* tableView;
 @property (nonatomic, strong) UIImageView* weatherBackground;
-@property (nonatomic, assign) CGFloat screenHeight;
+
+@property (nonatomic, strong) UIButton* updateForecast;
 
 
 
-/*
-
-    __weak IBOutlet UILabel *locationWeather;
-    
-    __weak IBOutlet UILabel *temperature;
-    
-    __weak IBOutlet UILabel *maxTemperature;
-    
-    __weak IBOutlet UILabel *minTemperature;
-    
-    __weak IBOutlet UILabel *windSpeed;
-
-*/
 
 @end
+
+
+// LEFTOVER CODE
+/*
+ __weak IBOutlet UILabel *locationWeather;
+ 
+ __weak IBOutlet UILabel *temperature;
+ 
+ __weak IBOutlet UILabel *maxTemperature;
+ 
+ __weak IBOutlet UILabel *minTemperature;
+ 
+ __weak IBOutlet UILabel *windSpeed;
+ */
