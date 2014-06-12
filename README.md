@@ -8,13 +8,12 @@ A proof-of-concept personal assistant developed for iOS, for the Mobile Applicat
 Features:
   
   - Task Manager;
-  - Weather Information ("Location Services" enabled is required to determine user location);
+  - Weather Information (from users location);
   - Maps (search of addresses and Points of Interest nearby the current location);
   
   
 
 The weather information is provided by the Forecast.io API, via the Objective-C wrapper Forecastr.
-
 
 
 Suggestions and bug reports are welcome!
