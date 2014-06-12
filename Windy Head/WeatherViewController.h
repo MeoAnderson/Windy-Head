@@ -13,28 +13,17 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
-// test code with  UITableView for weather data
-@interface WeatherViewController : UIViewController
 
-@property (nonatomic, strong) UIImageView* weatherBackground;
+@interface WeatherViewController : UIViewController <CLLocationManagerDelegate>
 
-@property (nonatomic, strong) UIButton* updateForecast;
+@property (strong, nonatomic) IBOutlet UIButton *updateForecast;
 
+// Placeholder labels to be updated with data from Forecast API
 
-
+@property (strong, nonatomic) IBOutlet UILabel *city;
+@property (strong, nonatomic) IBOutlet UILabel *state;
+@property (strong, nonatomic) IBOutlet UILabel *temperature;
+@property (strong, nonatomic) IBOutlet UILabel *pressure;
+@property (strong, nonatomic) IBOutlet UILabel *windSpeed;
 
 @end
-
-
-// LEFTOVER CODE
-/*
- __weak IBOutlet UILabel *locationWeather;
- 
- __weak IBOutlet UILabel *temperature;
- 
- __weak IBOutlet UILabel *maxTemperature;
- 
- __weak IBOutlet UILabel *minTemperature;
- 
- __weak IBOutlet UILabel *windSpeed;
- */

@@ -31,7 +31,7 @@
     
     CLLocation* location;
     
-    MKCoordinateRegion region; //create a region.  No this is not a pointer
+    MKCoordinateRegion region; //create a region.
     region.center = location.coordinate;
     // set the region center to your current location
     MKCoordinateSpan span; // create a range of your view
@@ -79,7 +79,7 @@
         }
         
     
-        // To dismiss keyboard and validate
+        // To dismiss keyboard and validate text input
         [sender resignFirstResponder];
     }];
 }

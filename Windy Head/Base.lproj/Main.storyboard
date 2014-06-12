@@ -85,66 +85,93 @@
             </objects>
             <point key="canvasLocation" x="2056" y="-4036"/>
         </scene>
-        <!--View Controller - Weather-->
+        <!--Weather View Controller - Weather-->
         <scene sceneID="bxB-ah-lMV">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" id="FPU-kx-4O2" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="FPU-kx-4O2" customClass="WeatherViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="htc-10-ZHp"/>
                         <viewControllerLayoutGuide type="bottom" id="5Ao-zM-HbU"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="BG0-Hl-Ku4">
+                    <view key="view" contentMode="scaleAspectFill" id="BG0-Hl-Ku4">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="weatherBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="vLH-Q5-ihj">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="weatherBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="vLH-Q5-ihj">
+                                <rect key="frame" x="-640" y="-35" width="2048" height="1536"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fjl-PF-tfo">
-                                <rect key="frame" x="257" y="97" width="254" height="127"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fjl-PF-tfo">
+                                <rect key="frame" x="63" y="71" width="642" height="287"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="100"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="70"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Temperature" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OS3-p2-53X">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Temperature" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OS3-p2-53X">
                                 <rect key="frame" x="83" y="366" width="200" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="State" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNG-2F-r72">
-                                <rect key="frame" x="83" y="360" width="78" height="39"/>
+                                <rect key="frame" x="83" y="342" width="78" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pressure" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0Q-yp-m30">
-                                <rect key="frame" x="83" y="425" width="165" height="52"/>
+                                <rect key="frame" x="83" y="441" width="165" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WindSpeed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9G-mF-Rsb">
-                                <rect key="frame" x="83" y="470" width="154" height="36"/>
+                                <rect key="frame" x="83" y="501" width="154" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcE-Dg-yuI">
-                                <rect key="frame" x="278" y="787" width="213" height="137"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="getForecast" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEx-AL-lOs" userLabel="getForecast">
+                                <rect key="frame" x="373" y="604" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
-                                <state key="normal" title="Refresh Forecast">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="238" id="fUq-Rm-hFy"/>
+                                    <constraint firstAttribute="height" constant="76" id="iJG-4b-u8L"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="updateForecast:" destination="FPU-kx-4O2" eventType="touchUpInside" id="8zs-Td-p6s"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5Ao-zM-HbU" firstAttribute="top" secondItem="qEx-AL-lOs" secondAttribute="bottom" constant="349" id="6Ar-SL-Seb"/>
+                            <constraint firstItem="qEx-AL-lOs" firstAttribute="top" secondItem="OS3-p2-53X" secondAttribute="bottom" constant="84" id="75t-qh-TRG"/>
+                            <constraint firstItem="Fjl-PF-tfo" firstAttribute="centerX" secondItem="qEx-AL-lOs" secondAttribute="centerX" id="8Ib-Yv-8tB"/>
+                            <constraint firstItem="Fjl-PF-tfo" firstAttribute="top" secondItem="htc-10-ZHp" secondAttribute="bottom" constant="3" id="P6s-Mg-Sax"/>
+                            <constraint firstItem="Fjl-PF-tfo" firstAttribute="centerX" secondItem="vLH-Q5-ihj" secondAttribute="centerX" id="WbA-KN-HWB"/>
+                            <constraint firstItem="Fjl-PF-tfo" firstAttribute="centerX" secondItem="BG0-Hl-Ku4" secondAttribute="centerX" id="Zf6-Je-vht"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Weather" image="weather.png" id="c9c-mY-KIc"/>
                     <navigationItem key="navigationItem" id="MQu-Np-7Zs"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="city" destination="Fjl-PF-tfo" id="3wX-F7-4hC"/>
+                        <outlet property="pressure" destination="t0Q-yp-m30" id="cys-Bg-dzd"/>
+                        <outlet property="state" destination="UNG-2F-r72" id="RRY-9B-Y6N"/>
+                        <outlet property="temperature" destination="OS3-p2-53X" id="Tdb-mu-C8o"/>
+                        <outlet property="updateForecast" destination="qEx-AL-lOs" id="R3s-Qw-Veh"/>
+                        <outlet property="windSpeed" destination="g9G-mF-Rsb" id="17B-oA-fPg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dK8-Y9-bvG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
