@@ -25,5 +25,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *temperature;
 @property (strong, nonatomic) IBOutlet UILabel *pressure;
 @property (strong, nonatomic) IBOutlet UILabel *windSpeed;
+@property (strong, nonatomic) IBOutlet UILabel *humidity;
 
 @end

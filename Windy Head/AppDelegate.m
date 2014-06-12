@@ -16,10 +16,7 @@
     
     // Override point for customization after application launch.
     
-    CLLocation* location;
-    
-    
-    
+ 
     // Handle launching from a notification
     UILocalNotification *locationNotification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
     if (locationNotification) {

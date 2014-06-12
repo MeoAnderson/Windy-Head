@@ -21,14 +21,16 @@
 
 @implementation WeatherViewController
 
-
+/*
 // Synthetizing the UILabels
-//@synthesize locationManager;
-@synthesize city;
-@synthesize state;
-@synthesize temperature;
-@synthesize pressure;
-@synthesize windSpeed;
+//@synthesize city;
+//@synthesize state;
+//@synthesize temperature;
+//@synthesize pressure;
+//@synthesize windSpeed;
+*/
+
+
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -38,6 +40,9 @@
     }
     return self;
 }
+
+
+
 
 
 // EXPLAIN
@@ -51,20 +56,10 @@
         
 }
 
-// Notifications - Still not working as it should, only appear after an event turns them on - TBR
 
-- (void) Notifications {
-    
-    UILocalNotification* notification = [[UILocalNotification alloc]init];
-    notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:5];
-    notification.alertAction = @"Windy Head";
-    notification.alertBody = @"Don't forget to check your daily tasks!";
-    notification.timeZone = [NSTimeZone defaultTimeZone];
-    
-    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
-    
-}
-//EXPLAIN IN A LOT OF DETAIL
+
+
+// This function has two major goals: User location detection, and forecast information acording the location
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation  {
     
     CLLocation *currentLocation = newLocation;
@@ -78,10 +73,21 @@
         } else {
             CLPlacemark *placemark = [placemarks lastObject];
             self.city.text = [NSString stringWithFormat:@"%@", placemark.locality];
-            NSLog(@"Found %@", placemark.locality);
+            _city.alpha = 0;
+            [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseIn
+                             animations:^{ _city.alpha = 1;}
+                             completion:nil];
+            
+            NSLog(@"You are in %@.", placemark.locality);
         }
         
-    }];
+    }
+     
+     
+     
+     ];
+    
+    // Forecast API initialization & setup
     
     Forecastr* forecast = [[Forecastr alloc]init];
     forecast.apiKey = @"013285791a63a2a6b4fa791029b75bf3";
@@ -89,23 +95,85 @@
     forecast.units = @"ca";
     
     
-    // Get forecast data from Forecast API
-    [forecast getForecastForLocation:currentLocation time:nil exclusions:nil extend:nil success:^(id JSON)
-     {
-         NSLog(@"JSON response was: %@", JSON);
-     } failure:^(NSError *error, id response)
-     {
-         NSLog(@"Error while retrieving forecast: %@", [forecast messageForError:error withResponse:response]);
-     }
-     ];
-
+    // Get forecast data (according users location)
+    [forecast getForecastForLocation:currentLocation time:nil exclusions:nil extend:nil success:^(id JSON){
+        
+        NSLog(@"JSON response was: %@", JSON);
+        
+        NSDictionary *weatherData = [(NSDictionary *)JSON objectForKey:kFCCurrentlyForecast];
+        
+        [self updateWeatherData:weatherData];
+        
+        }
+     
+                             failure:^(NSError *error, id response){
+                                 
+                                 
+                                 
+                                 NSLog(@"Error while retrieving forecast: %@", [forecast messageForError:error withResponse:response]);
+                                 
+                                 
+                             }];
+    
     
 }
 
 
 
-// Event for button "Get Updated Forecast", including user location detection and weather data retrieval
+// Function to update storyboard labels with weather data
 
+- (void) updateWeatherData:(NSDictionary *) weatherData{
+    
+    NSString *actualTemperature = [NSString stringWithFormat:@"Temperature: %.1f C°", [[weatherData objectForKey:kFCTemperature] doubleValue]];
+    self.temperature.text = actualTemperature;
+    _temperature.alpha = 0;
+    
+    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{ _temperature.alpha = 1;}
+                     completion:nil];
+
+    
+    NSString *actualState = [NSString stringWithFormat:@"Current Weather State: %@", [weatherData objectForKey:kFCSummary]];
+    self.state.text = actualState;
+    _state.alpha = 0;
+    
+    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{ _state.alpha = 1;}
+                     completion:nil];
+
+    
+    NSString *actualWindSpeed = [NSString stringWithFormat:@"Wind Speed: %@ km/h", [weatherData objectForKey:kFCWindSpeed]];
+    self.windSpeed.text = actualWindSpeed;
+    _windSpeed.alpha = 0;
+    
+    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{ _windSpeed.alpha = 1;}
+                     completion:nil];
+
+    
+    NSString *actualAtmosphericPressure = [NSString stringWithFormat:@"Atmospheric Pressure: %@ mb", [weatherData objectForKey:kFCPressure]];
+    self.pressure.text = actualAtmosphericPressure;
+    _pressure.alpha = 0;
+    
+    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{ _pressure.alpha = 1;}
+                     completion:nil];
+
+    
+    NSString *actualHumidity = [NSString stringWithFormat:@"Atmospheric Pressure: %@ mb", [weatherData objectForKey:kFCHumidity]];
+    self.humidity.text = actualHumidity;
+    _humidity.alpha = 0;
+    
+    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{ _humidity.alpha = 1;}
+                     completion:nil];
+
+
+    
+}
+
+// Event for button "Get Updated Forecast", including user location detection and weather data retrieval
+/*
 
 - (IBAction)updateForecast:(id)sender {
     
@@ -113,7 +181,7 @@
 
 }
 
-
+*/
 
 
 
@@ -146,10 +214,10 @@ UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Location and Weather D
  activityUpdatingForecast.center = CGPointMake(500, 500);
  
  [activityUpdatingForecast startAnimating];
- */
+ 
 
 
-/*
+
  // Use reverse geocoding to get the location string (and display it)
  
  [reverseGeocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error){
@@ -159,4 +227,36 @@ UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Location and Weather D
  NSLog(@"Found %@", placemark.locality);
  
  }];
+ 
+ 
+ 
+ 
+ 
+ UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Location and Weather Data"
+ message:[NSString stringWithFormat:@"%@",forecast]
+ delegate:nil
+ cancelButtonTitle:@"Ok"
+ otherButtonTitles:nil];
+ 
+ [alert show];
+ 
+ 
+ NSDictionary *currentConditions = [(NSDictionary *)JSON objectForKey:kFCCurrentlyForecast];
+ 
+ [self updateDisplayWithCurrentConditions:currentConditions];
+ 
+ 
+ 
+ 
+ 
+ 
+ NSDictionary *weatherDescription = [(NSDictionary *)JSON objectForKey:kFCCurrentlyForecast];
+ self.temperature.text = [NSString stringWithFormat:@"Temperature: %.1f C°", [[weatherDescription objectForKey:kFCTemperature] doubleValue]];
+ 
+ NSDictionary *stateDescription = [(NSDictionary *)JSON objectForKey:kFCCurrentlyForecast];
+ self.temperature.text = [NSString stringWithFormat:@"Weather State: %@", [stateDescription objectForKey:kFCSummary]];
+ 
+ 
+ 
+ 
  */
