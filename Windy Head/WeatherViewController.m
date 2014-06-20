@@ -13,23 +13,12 @@
 
 {
     CLLocationManager *locationManager;
-    Forecastr *forecastr;
 }
 
 @end
 
 
 @implementation WeatherViewController
-
-/*
-// Synthetizing the UILabels
-//@synthesize city;
-//@synthesize state;
-//@synthesize temperature;
-//@synthesize pressure;
-//@synthesize windSpeed;
-*/
-
 
 
 
@@ -45,7 +34,8 @@
 
 
 
-// EXPLAIN
+// Once the view is loaded, this will run first
+// Location detection
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -59,7 +49,7 @@
 
 
 
-// This function has two major goals: User location detection, and forecast information acording the location
+// This function has two major goals: User location detection, and return the forecast information acording the location
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation  {
     
     CLLocation *currentLocation = newLocation;
@@ -100,7 +90,7 @@
         
         NSLog(@"JSON response was: %@", JSON);
         
-        NSDictionary *weatherData = [(NSDictionary *)JSON objectForKey:kFCCurrentlyForecast];
+        NSDictionary* weatherData = [(NSDictionary *)JSON objectForKey:kFCCurrentlyForecast];
         
         [self updateWeatherData:weatherData];
         
@@ -118,11 +108,10 @@
     
 }
 
-
-
-// Function to update storyboard labels with weather data
+// Update storyboard labels with weather data, with a fade-in effect
 
 - (void) updateWeatherData:(NSDictionary *) weatherData{
+    
     
     NSString *actualTemperature = [NSString stringWithFormat:@"Temperature: %.1f C°", [[weatherData objectForKey:kFCTemperature] doubleValue]];
     self.temperature.text = actualTemperature;
@@ -160,7 +149,7 @@
                      completion:nil];
 
     
-    NSString *actualHumidity = [NSString stringWithFormat:@"Atmospheric Pressure: %@ mb", [weatherData objectForKey:kFCHumidity]];
+    NSString *actualHumidity = [NSString stringWithFormat:@"Humidity: %@", [weatherData objectForKey:kFCHumidity]];
     self.humidity.text = actualHumidity;
     _humidity.alpha = 0;
     
@@ -173,18 +162,13 @@
 }
 
 // Event for button "Get Updated Forecast", including user location detection and weather data retrieval
-/*
+
 
 - (IBAction)updateForecast:(id)sender {
     
     [locationManager startUpdatingLocation];
 
 }
-
-*/
-
-
-
 
 
 - (void)didReceiveMemoryWarning
@@ -194,6 +178,18 @@
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*

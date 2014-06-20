@@ -97,12 +97,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="weatherBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="vLH-Q5-ihj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="weatherBackground2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vLH-Q5-ihj">
                                 <rect key="frame" x="-640" y="-35" width="2048" height="1536"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="city" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fjl-PF-tfo" userLabel="city">
-                                <rect key="frame" x="328" y="200" width="112" height="95"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="city" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fjl-PF-tfo" userLabel="city">
+                                <rect key="frame" x="328" y="285" width="112" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
@@ -111,15 +111,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="temp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OS3-p2-53X" userLabel="temperature">
-                                <rect key="frame" x="83" y="414" width="200" height="100"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="temp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OS3-p2-53X" userLabel="temperature">
+                                <rect key="frame" x="83" y="414" width="312" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
                                 </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="syX-KD-M9a"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -178,14 +175,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="OS3-p2-53X" secondAttribute="centerY" constant="48" id="10g-x5-mO0"/>
                             <constraint firstAttribute="centerX" secondItem="Fjl-PF-tfo" secondAttribute="centerX" constant="-0.5" id="6Ps-X2-pzc"/>
                             <constraint firstAttribute="centerY" secondItem="t0Q-yp-m30" secondAttribute="centerY" constant="-109" id="8Bg-pu-eY5"/>
                             <constraint firstAttribute="centerY" secondItem="g9G-mF-Rsb" secondAttribute="centerY" constant="-51" id="9hd-Gi-pUM"/>
                             <constraint firstAttribute="centerY" secondItem="UNG-2F-r72" secondAttribute="centerY" constant="104.5" id="Nzc-sW-TPL"/>
                             <constraint firstAttribute="centerY" secondItem="Fjl-PF-tfo" secondAttribute="centerY" constant="347.5" id="PfM-jg-2ux"/>
                             <constraint firstAttribute="centerY" secondItem="vCe-xL-eA6" secondAttribute="centerY" id="QlU-e9-G6a"/>
-                            <constraint firstAttribute="centerX" secondItem="OS3-p2-53X" secondAttribute="centerX" constant="201" id="WF7-Vj-ssm"/>
                             <constraint firstAttribute="centerX" secondItem="t0Q-yp-m30" secondAttribute="centerX" constant="43.5" id="eXV-XW-qxd"/>
                             <constraint firstAttribute="centerX" secondItem="g9G-mF-Rsb" secondAttribute="centerX" constant="145" id="fr9-qS-z9a"/>
                             <constraint firstAttribute="centerX" secondItem="UNG-2F-r72" secondAttribute="centerX" constant="20.5" id="rRE-J0-cG5"/>
@@ -283,17 +278,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about.png" translatesAutoresizingMaskIntoConstraints="NO" id="BUB-VR-hhs">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="weatherBackground5.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="BUB-VR-hhs">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <navigationBar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ej5-n5-O85">
+                            <navigationBar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ej5-n5-O85">
                                 <rect key="frame" x="0.0" y="0.0" width="769" height="44"/>
                                 <items>
                                     <navigationItem id="WaP-O7-m87"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An application developed for" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6p-yu-89a">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="An application developed for" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6p-yu-89a">
                                 <rect key="frame" x="274" y="457" width="221" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -312,7 +307,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="21"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Vasco Patrício" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvW-09-ypN">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="by Vasco Patrício" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvW-09-ypN">
                                 <rect key="frame" x="324" y="545" width="121" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
@@ -322,22 +317,10 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="BUB-VR-hhs" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="3:4" id="0IL-SP-0E0"/>
-                            <constraint firstItem="lKv-HP-47o" firstAttribute="top" secondItem="z6p-yu-89a" secondAttribute="bottom" constant="8" symbolic="YES" id="0Mz-Am-xlS"/>
-                            <constraint firstAttribute="trailing" secondItem="lKv-HP-47o" secondAttribute="trailing" constant="-82" id="0Wc-1I-3CK"/>
-                            <constraint firstAttribute="centerY" secondItem="tvW-09-ypN" secondAttribute="centerY" constant="-43.5" id="6gQ-9U-Y23"/>
-                            <constraint firstAttribute="centerX" secondItem="z6p-yu-89a" secondAttribute="centerX" constant="-0.5" id="7uK-qW-Xg6"/>
-                            <constraint firstAttribute="centerX" secondItem="BUB-VR-hhs" secondAttribute="centerX" id="MeY-yD-sjC"/>
-                            <constraint firstItem="ej5-n5-O85" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" id="Z4E-1o-Awr"/>
-                            <constraint firstItem="C3a-p1-rS8" firstAttribute="top" secondItem="BUB-VR-hhs" secondAttribute="bottom" constant="-49" id="ZT1-VS-nvg"/>
-                            <constraint firstItem="BUB-VR-hhs" firstAttribute="top" secondItem="ZXQ-6P-xwx" secondAttribute="bottom" constant="-94" id="Zd2-t3-2av"/>
-                            <constraint firstAttribute="centerY" secondItem="BUB-VR-hhs" secondAttribute="centerY" id="gvQ-Mr-OBl"/>
-                            <constraint firstAttribute="centerX" secondItem="BUB-VR-hhs" secondAttribute="centerX" id="k2X-eb-Idv"/>
-                            <constraint firstItem="ej5-n5-O85" firstAttribute="centerX" secondItem="tvW-09-ypN" secondAttribute="centerX" id="kcG-bg-CMp"/>
-                            <constraint firstAttribute="centerY" secondItem="BUB-VR-hhs" secondAttribute="centerY" id="mHh-TY-znI"/>
-                            <constraint firstItem="ej5-n5-O85" firstAttribute="leading" secondItem="BUB-VR-hhs" secondAttribute="leading" id="p1f-B2-EbI"/>
-                            <constraint firstItem="z6p-yu-89a" firstAttribute="top" secondItem="ZXQ-6P-xwx" secondAttribute="bottom" constant="363" id="xPI-69-c2y"/>
-                            <constraint firstItem="ej5-n5-O85" firstAttribute="top" secondItem="BUB-VR-hhs" secondAttribute="top" id="y6Y-ua-7g3"/>
+                            <constraint firstAttribute="centerY" secondItem="lKv-HP-47o" secondAttribute="centerY" constant="0.5" id="8bN-Ph-fKw"/>
+                            <constraint firstAttribute="centerY" secondItem="BUB-VR-hhs" secondAttribute="centerY" id="DEe-tb-5av"/>
+                            <constraint firstAttribute="centerX" secondItem="BUB-VR-hhs" secondAttribute="centerX" id="G14-gV-eQW"/>
+                            <constraint firstAttribute="centerX" secondItem="lKv-HP-47o" secondAttribute="centerX" constant="-155.5" id="m2Q-6x-cxg"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="cog.png" id="cPa-gy-q4n"/>
@@ -373,12 +356,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="about.png" width="1536" height="2048"/>
         <image name="clock.png" width="26" height="26"/>
         <image name="cog.png" width="26" height="26"/>
         <image name="globe.png" width="26" height="26"/>
         <image name="weather.png" width="26" height="26"/>
-        <image name="weatherBackground.png" width="2048" height="1536"/>
+        <image name="weatherBackground2.jpg" width="2048" height="2048"/>
+        <image name="weatherBackground5.jpg" width="2048" height="2048"/>
     </resources>
     <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

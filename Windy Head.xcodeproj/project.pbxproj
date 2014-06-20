@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C61CDEE9194B63D8008CDB9F /* weatherBackground2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C61CDEE5194B63D8008CDB9F /* weatherBackground2.jpg */; };
+		C61CDEEA194B63D8008CDB9F /* weatherBackground3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C61CDEE6194B63D8008CDB9F /* weatherBackground3.jpg */; };
+		C61CDEEB194B63D8008CDB9F /* weatherBackground4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C61CDEE7194B63D8008CDB9F /* weatherBackground4.jpg */; };
+		C61CDEEC194B63D8008CDB9F /* weatherBackground5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C61CDEE8194B63D8008CDB9F /* weatherBackground5.jpg */; };
 		C61D53C119410AE900F3191A /* weather.png in Resources */ = {isa = PBXBuildFile; fileRef = C61D53C019410AE900F3191A /* weather.png */; };
 		C61D53C319410EF900F3191A /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = C61D53C219410EF900F3191A /* about.png */; };
 		C62E32BE193FC102006FDF48 /* windyhead_landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = C62E32BC193FC102006FDF48 /* windyhead_landscape.png */; };
@@ -65,6 +69,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C61CDEE5194B63D8008CDB9F /* weatherBackground2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = weatherBackground2.jpg; sourceTree = "<group>"; };
+		C61CDEE6194B63D8008CDB9F /* weatherBackground3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = weatherBackground3.jpg; sourceTree = "<group>"; };
+		C61CDEE7194B63D8008CDB9F /* weatherBackground4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = weatherBackground4.jpg; sourceTree = "<group>"; };
+		C61CDEE8194B63D8008CDB9F /* weatherBackground5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = weatherBackground5.jpg; sourceTree = "<group>"; };
 		C61D53C019410AE900F3191A /* weather.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weather.png; sourceTree = "<group>"; };
 		C61D53C219410EF900F3191A /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about.png; sourceTree = "<group>"; };
 		C62E32BC193FC102006FDF48 /* windyhead_landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = windyhead_landscape.png; sourceTree = "<group>"; };
@@ -162,6 +170,10 @@
 		C61D53C719411FCA00F3191A /* Launch Images */ = {
 			isa = PBXGroup;
 			children = (
+				C61CDEE5194B63D8008CDB9F /* weatherBackground2.jpg */,
+				C61CDEE6194B63D8008CDB9F /* weatherBackground3.jpg */,
+				C61CDEE7194B63D8008CDB9F /* weatherBackground4.jpg */,
+				C61CDEE8194B63D8008CDB9F /* weatherBackground5.jpg */,
 				C6817D9419465FC700123544 /* weatherBackground.png */,
 				C62E32BC193FC102006FDF48 /* windyhead_landscape.png */,
 				C62E32BD193FC102006FDF48 /* windyhead_portrait.png */,
@@ -414,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C66744CC193661D1000293D4 /* sun.png in Resources */,
+				C61CDEEA194B63D8008CDB9F /* weatherBackground3.jpg in Resources */,
 				C66744C819365C72000293D4 /* cog.png in Resources */,
 				C66744CA19365C72000293D4 /* globe.png in Resources */,
 				C66744C719365C72000293D4 /* clock.png in Resources */,
@@ -424,10 +437,13 @@
 				C6EFCE4E1936B455002F8831 /* clock2.png in Resources */,
 				C62E32BE193FC102006FDF48 /* windyhead_landscape.png in Resources */,
 				C667447C193656AA000293D4 /* InfoPlist.strings in Resources */,
+				C61CDEEC194B63D8008CDB9F /* weatherBackground5.jpg in Resources */,
 				C6674485193656AA000293D4 /* Main.storyboard in Resources */,
 				C66744C919365C72000293D4 /* fire.png in Resources */,
 				C66744FA193668C1000293D4 /* ForecastrUnits.plist in Resources */,
 				C6817D9519465FC700123544 /* weatherBackground.png in Resources */,
+				C61CDEE9194B63D8008CDB9F /* weatherBackground2.jpg in Resources */,
+				C61CDEEB194B63D8008CDB9F /* weatherBackground4.jpg in Resources */,
 				C61D53C119410AE900F3191A /* weather.png in Resources */,
 				C62E32BF193FC102006FDF48 /* windyhead_portrait.png in Resources */,
 			);
