@@ -15,35 +15,11 @@
     
     
     // Override point for customization after application launch.
+
     
- 
-    // Handle launching from a notification
-    UILocalNotification *locationNotification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
-    if (locationNotification) {
-        // Set icon badge number to zero
-        application.applicationIconBadgeNumber = 0;
-    
-    }
     return YES;
 }
 
-- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
-{
-    UIApplicationState state = [application applicationState];
-    if (state == UIApplicationStateActive) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Reminder"
-                                                        message:notification.alertBody
-                                                       delegate:self cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
-    }
-    
-    // Request to reload table view data
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadData" object:self];
-    
-    // Set icon badge number to zero
-    application.applicationIconBadgeNumber = 0;
-}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -55,6 +31,19 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    
+    
+    // Notifications are here so they can be displayed after the application is paused or killed
+    
+    UILocalNotification* notifications = [[UILocalNotification alloc]init];
+    notifications.alertAction = @"Reminder";
+    notifications.alertBody = @"Don't forget to check your tasks!";
+    notifications.fireDate = [NSDate dateWithTimeIntervalSinceNow:5];
+    
+    [application setScheduledLocalNotifications:[NSArray arrayWithObject:notifications]];
+    
+    
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
