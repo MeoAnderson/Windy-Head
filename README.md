@@ -7,9 +7,10 @@ A proof-of-concept personal assistant developed for iOS, for the Mobile Applicat
 
 Features:
   
-  - Task Manager;
+  - Task Manager with Calendar integration;
   - Weather Information (from users location);
   - Maps (search of addresses and Points of Interest nearby the current location);
+  - Notifications;
   
   
 
