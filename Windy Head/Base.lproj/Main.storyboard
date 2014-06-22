@@ -31,7 +31,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="IfG-JF-OTL" kind="modal" identifier="showTasksViewController" id="KcY-fI-VH3"/>
+                                    <segue destination="IfG-JF-OTL" kind="custom" identifier="showTasksViewController" id="KcY-fI-VH3"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

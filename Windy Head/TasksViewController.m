@@ -65,8 +65,7 @@
         
         // Allow event editing
         eventViewController.allowsEditing = YES;
-    
-    
+        eventViewController.allowsCalendarPreview = YES;
     
     }
 }
