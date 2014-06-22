@@ -15,6 +15,9 @@
 		C61D53C319410EF900F3191A /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = C61D53C219410EF900F3191A /* about.png */; };
 		C62E32BE193FC102006FDF48 /* windyhead_landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = C62E32BC193FC102006FDF48 /* windyhead_landscape.png */; };
 		C62E32BF193FC102006FDF48 /* windyhead_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = C62E32BD193FC102006FDF48 /* windyhead_portrait.png */; };
+		C647AEDD1954DE900092E5B0 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C647AEDB1954DE900092E5B0 /* EventKit.framework */; };
+		C647AEDE1954DE900092E5B0 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C647AEDC1954DE900092E5B0 /* EventKitUI.framework */; };
+		C647AEE61955E9D30092E5B0 /* TasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C647AEE51955E9D30092E5B0 /* TasksViewController.m */; };
 		C6674472193656AA000293D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6674471193656AA000293D4 /* Foundation.framework */; };
 		C6674474193656AA000293D4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6674473193656AA000293D4 /* CoreGraphics.framework */; };
 		C6674476193656AA000293D4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6674475193656AA000293D4 /* UIKit.framework */; };
@@ -23,7 +26,6 @@
 		C6674482193656AA000293D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6674481193656AA000293D4 /* AppDelegate.m */; };
 		C6674485193656AA000293D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6674483193656AA000293D4 /* Main.storyboard */; };
 		C6674488193656AA000293D4 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6674487193656AA000293D4 /* FirstViewController.m */; };
-		C667448B193656AA000293D4 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C667448A193656AA000293D4 /* SecondViewController.m */; };
 		C6674494193656AA000293D4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6674493193656AA000293D4 /* XCTest.framework */; };
 		C6674495193656AA000293D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6674471193656AA000293D4 /* Foundation.framework */; };
 		C6674496193656AA000293D4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6674475193656AA000293D4 /* UIKit.framework */; };
@@ -77,6 +79,10 @@
 		C61D53C219410EF900F3191A /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about.png; sourceTree = "<group>"; };
 		C62E32BC193FC102006FDF48 /* windyhead_landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = windyhead_landscape.png; sourceTree = "<group>"; };
 		C62E32BD193FC102006FDF48 /* windyhead_portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = windyhead_portrait.png; sourceTree = "<group>"; };
+		C647AEDB1954DE900092E5B0 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		C647AEDC1954DE900092E5B0 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		C647AEE41955E9D20092E5B0 /* TasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasksViewController.h; sourceTree = "<group>"; };
+		C647AEE51955E9D30092E5B0 /* TasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TasksViewController.m; sourceTree = "<group>"; };
 		C667446E193656AA000293D4 /* Windy Head.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Windy Head.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6674471193656AA000293D4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C6674473193656AA000293D4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -90,8 +96,6 @@
 		C6674484193656AA000293D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C6674486193656AA000293D4 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		C6674487193656AA000293D4 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		C6674489193656AA000293D4 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		C667448A193656AA000293D4 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		C6674492193656AA000293D4 /* Windy HeadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Windy HeadTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6674493193656AA000293D4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C667449B193656AA000293D4 /* Windy HeadTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Windy HeadTests-Info.plist"; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C647AEDD1954DE900092E5B0 /* EventKit.framework in Frameworks */,
+				C647AEDE1954DE900092E5B0 /* EventKitUI.framework in Frameworks */,
 				C66744AE193656C8000293D4 /* MapKit.framework in Frameworks */,
 				C66744AC193656BE000293D4 /* CoreData.framework in Frameworks */,
 				C66744AA193656B8000293D4 /* CoreLocation.framework in Frameworks */,
@@ -227,6 +233,8 @@
 		C6674470193656AA000293D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C647AEDB1954DE900092E5B0 /* EventKit.framework */,
+				C647AEDC1954DE900092E5B0 /* EventKitUI.framework */,
 				C66744CD19366363000293D4 /* Forecastr API */,
 				C66744AD193656C8000293D4 /* MapKit.framework */,
 				C66744AB193656BE000293D4 /* CoreData.framework */,
@@ -246,12 +254,12 @@
 				C6674483193656AA000293D4 /* Main.storyboard */,
 				C6674480193656AA000293D4 /* AppDelegate.h */,
 				C6674481193656AA000293D4 /* AppDelegate.m */,
+				C647AEE41955E9D20092E5B0 /* TasksViewController.h */,
+				C647AEE51955E9D30092E5B0 /* TasksViewController.m */,
 				C66744AF19365715000293D4 /* WeatherViewController.h */,
 				C66744B019365715000293D4 /* WeatherViewController.m */,
 				C6674486193656AA000293D4 /* FirstViewController.h */,
 				C6674487193656AA000293D4 /* FirstViewController.m */,
-				C6674489193656AA000293D4 /* SecondViewController.h */,
-				C667448A193656AA000293D4 /* SecondViewController.m */,
 				C66744B819365B53000293D4 /* Images-2.xcassets */,
 				C6674478193656AA000293D4 /* Supporting Files */,
 			);
@@ -465,7 +473,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C66744F6193668C1000293D4 /* AFURLSessionManager.m in Sources */,
-				C667448B193656AA000293D4 /* SecondViewController.m in Sources */,
 				C6674482193656AA000293D4 /* AppDelegate.m in Sources */,
 				C66744F1193668C1000293D4 /* AFNetworkReachabilityManager.m in Sources */,
 				C6674488193656AA000293D4 /* FirstViewController.m in Sources */,
@@ -475,6 +482,7 @@
 				C66744F4193668C1000293D4 /* AFURLRequestSerialization.m in Sources */,
 				C66744B119365715000293D4 /* WeatherViewController.m in Sources */,
 				C667447E193656AA000293D4 /* main.m in Sources */,
+				C647AEE61955E9D30092E5B0 /* TasksViewController.m in Sources */,
 				C66744EF193668C1000293D4 /* AFHTTPRequestOperationManager.m in Sources */,
 				C66744F2193668C1000293D4 /* AFSecurityPolicy.m in Sources */,
 				C66744F7193668C1000293D4 /* Forecastr+CLLocation.m in Sources */,
