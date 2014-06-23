@@ -24,7 +24,7 @@
 // Default calendar associated with the above event store
 @property (nonatomic, strong) EKCalendar *defaultCalendar;
 
-// Array of all events happening within the next 24 hours
+// Array of all events happening within the next 5 days
 @property (nonatomic, strong) NSMutableArray *eventsList;
 
 // Used to add events to Calendar
@@ -137,7 +137,7 @@
              TasksViewController * __weak weakSelf = self;
              // Let's ensure that our code will be executed from the main queue
              dispatch_async(dispatch_get_main_queue(), ^{
-                 // The user has granted access to their Calendar; let's populate our UI with all events occuring in the next 24 hours.
+                 // The user has granted access to their Calendar; let's populate our UI with all events occuring in the next 5 days
                  [weakSelf accessGrantedForCalendar];
              });
          }
@@ -152,7 +152,7 @@
     self.defaultCalendar = self.eventStore.defaultCalendarForNewEvents;
     // Enable the Add button
     self.addButton.enabled = YES;
-    // Fetch all events happening in the next 24 hours and put them into eventsList
+    // Fetch all events happening in the next 5 days and put them into eventsList
     self.eventsList = [self fetchEvents];
     // Update the UI with the above events
     [self.tableView reloadData];
@@ -160,7 +160,7 @@
 
 
 
-// Fetch all events happening in the next 24 hours
+// Fetch all events happening in the next 5 days
 - (NSMutableArray *)fetchEvents
 {
     NSDate *startDate = [NSDate date];

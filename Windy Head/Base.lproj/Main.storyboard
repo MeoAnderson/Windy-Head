@@ -53,7 +53,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Jf-9v-nwK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3042" y="-3560"/>
+            <point key="canvasLocation" x="3018" y="-2448"/>
         </scene>
         <!--Event View Controller - Task Details-->
         <scene sceneID="c8c-ZS-T2m">
@@ -71,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6Y-N4-RHV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3927" y="-3560"/>
+            <point key="canvasLocation" x="4199" y="-2448"/>
         </scene>
         <!--Navigation Controller - Tasks-->
         <scene sceneID="Fny-oF-ejt">
@@ -87,7 +87,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qUR-No-04w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1332" y="-3630"/>
+            <point key="canvasLocation" x="1820" y="-2448"/>
         </scene>
         <!--Weather View Controller - Weather-->
         <scene sceneID="bxB-ah-lMV">
@@ -184,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dK8-Y9-bvG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3042" y="-2255"/>
+            <point key="canvasLocation" x="3042" y="-1159"/>
         </scene>
         <!--First View Controller - Maps-->
         <scene sceneID="hNz-n2-bh7">
