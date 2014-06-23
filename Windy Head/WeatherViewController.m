@@ -5,6 +5,9 @@
 //  Created by Vasco Patrício on 28/05/14.
 //  Copyright (c) 2014 ISCTE-IUL. All rights reserved.
 //
+//  "Windy Head" developed for Mobile Applications Development
+//
+// -----------------------------------------------------------------------
 
 #import "WeatherViewController.h"
 
@@ -33,7 +36,7 @@
 
 
 
-
+//-----------------------------------------------------------------------------------------------------------------------------------
 // Once the view is loaded, this will run first
 // Location detection
 - (void)viewDidLoad
@@ -48,8 +51,9 @@
 
 
 
-
+//-----------------------------------------------------------------------------------------------------------------------------------
 // This function has two major goals: User location detection, and return the forecast information acording the location
+
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation  {
     
     CLLocation *currentLocation = newLocation;
@@ -72,11 +76,9 @@
         }
         
     }
-     
-     
-     
-     ];
     
+     ];
+//-----------------------------------------------------------------------------------------------------------------------------------
     // Forecast API initialization & setup
     
     Forecastr* forecast = [[Forecastr alloc]init];
@@ -84,8 +86,9 @@
     forecast.cacheExpirationInMinutes = 1;
     forecast.units = @"ca";
     
-    
+//-----------------------------------------------------------------------------------------------------------------------------------
     // Get forecast data (according users location)
+    
     [forecast getForecastForLocation:currentLocation time:nil exclusions:nil extend:nil success:^(id JSON){
         
         NSLog(@"JSON response was: %@", JSON);
@@ -97,17 +100,13 @@
         }
      
                              failure:^(NSError *error, id response){
-                                 
-                                 
-                                 
+
                                  NSLog(@"Error while retrieving forecast: %@", [forecast messageForError:error withResponse:response]);
-                                 
                                  
                              }];
     
-    
 }
-
+//-----------------------------------------------------------------------------------------------------------------------------------
 // Update storyboard labels with weather data, with a fade-in effect
 
 - (void) updateWeatherData:(NSDictionary *) weatherData{
@@ -149,7 +148,7 @@
                      completion:nil];
 
     
-    NSString *actualHumidity = [NSString stringWithFormat:@"Humidity: %@", [weatherData objectForKey:kFCHumidity]];
+    NSString *actualHumidity = [NSString stringWithFormat:@"Humidity: %@ %%", [weatherData objectForKey:kFCHumidity]];
     self.humidity.text = actualHumidity;
     _humidity.alpha = 0;
     
@@ -157,10 +156,10 @@
                      animations:^{ _humidity.alpha = 1;}
                      completion:nil];
 
-
-    
+   
 }
 
+//-----------------------------------------------------------------------------------------------------------------------------------
 // Event for button "Get Updated Forecast", including user location detection and weather data retrieval
 
 
@@ -178,14 +177,6 @@
 }
 
 @end
-
-
-
-
-
-
-
-
 
 
 

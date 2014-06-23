@@ -5,6 +5,9 @@
 //  Created by Vasco Patrício on 28/05/14.
 //  Copyright (c) 2014 ISCTE-IUL. All rights reserved.
 //
+//  "Windy Head" developed for Mobile Applications Development
+//
+// -----------------------------------------------------------------------
 
 #import "FirstViewController.h"
 
@@ -19,6 +22,8 @@
     
 }
 
+//-----------------------------------------------------------------------------------------------------------------------------------
+// Detecting location and setting the map to zoom on it
 
 - (void)viewDidLoad
 {
@@ -47,13 +52,18 @@
     MKCoordinateRegion region;
     region.center = self.mapView.userLocation.coordinate;
     
+    // Controlling the zoom
+    
     MKCoordinateSpan span;
-    span.latitudeDelta  = 0.1; // Change these values to change the zoom
-    span.longitudeDelta = 0.1;
+    span.latitudeDelta  = 0.04;
+    span.longitudeDelta = 0.04;
     region.span = span;
     
     [self.mapView setRegion:region animated:YES];
 }
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+// Take the input from the keyboard and do a query with it
 
 - (IBAction)searchBox:(UITextField*)sender {
 
@@ -75,6 +85,8 @@
             MKPointAnnotation *annotations = [[MKPointAnnotation alloc]init];
             annotations.coordinate = item.placemark.coordinate;
             annotations.title = item.name;
+            annotations.subtitle = item.phoneNumber;
+            annotations.observationInfo = item.observationInfo;
             [_mapView addAnnotation:annotations];
         }
         
@@ -92,44 +104,3 @@
 }
 
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* PODE VIR A DAR JEITO
- - (void)observeValueForKeyPath:(NSString *)keyPath
- ofObject:(id)object
- change:(NSDictionary *)change
- context:(void *)context {
- 
- [self.mapView setCenterCoordinate:region animated:YES];
- 
- // and of course you can use here old and new location values
- }
- }
- 
- - (void) discoverCurrentLocation {
- 
- 
- CLLocationManager* locationDetector = [[CLLocationManager alloc]init];
- 
- locationDetector.desiredAccuracy = kCLLocationAccuracyBest;
- locationDetector.distanceFilter = kCLDistanceFilterNone;
- 
- [locationDetector startUpdatingLocation];
- 
- }
- */
-

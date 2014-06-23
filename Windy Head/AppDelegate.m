@@ -5,6 +5,9 @@
 //  Created by Vasco Patrício on 28/05/14.
 //  Copyright (c) 2014 ISCTE-IUL. All rights reserved.
 //
+//  "Windy Head" developed for Mobile Applications Development
+//
+// -----------------------------------------------------------------------
 
 #import "AppDelegate.h"
 
@@ -12,11 +15,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
-    
+   
     // Override point for customization after application launch.
-
-    
+ 
     return YES;
 }
 
@@ -37,8 +38,8 @@
     // Notifications are here so they can be displayed after the application is paused or killed
     
     UILocalNotification* notifications = [[UILocalNotification alloc]init];
-    notifications.alertAction = @"Reminder";
-    notifications.alertBody = @"Don't forget to check your tasks!";
+    notifications.alertAction = @"Hello There!";
+    notifications.alertBody = @"Don't forget to check your tasks and weather info!";
     notifications.fireDate = [NSDate dateWithTimeIntervalSinceNow:5];
     
     [application setScheduledLocalNotifications:[NSArray arrayWithObject:notifications]];

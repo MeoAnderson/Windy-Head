@@ -2,13 +2,20 @@
 //  TasksViewController.m
 //  Windy Head
 //
-//  Created by Vasco Patrício on 21/06/14.
+//  Created by Vasco Patrício on 28/05/14.
 //  Copyright (c) 2014 ISCTE-IUL. All rights reserved.
 //
+//  "Windy Head" developed for Mobile Applications Development
+//
+// -----------------------------------------------------------------------
 
 #import <EventKit/EventKit.h>
 #import <EventKitUI/EventKitUI.h>
 #import "TasksViewController.h"
+
+
+// Implementation of the Tasks View
+// Using the EventKit framework, it is possible to integrate directly the tasks with the Calendar
 
 @interface TasksViewController () <EKEventEditViewDelegate>
 // EKEventStore instance associated with the current Calendar application
@@ -27,8 +34,7 @@
 
 @implementation TasksViewController
 
-#pragma mark -
-#pragma mark View lifecycle
+
 
 - (void)viewDidLoad
 {
@@ -71,8 +77,7 @@
 }
 
 
-#pragma mark -
-#pragma mark Table View
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -90,8 +95,7 @@
 }
 
 
-#pragma mark -
-#pragma mark Access Calendar
+
 
 // Check the authorization status of our application for Calendar
 -(void)checkEventStoreAccessForCalendar
@@ -155,8 +159,6 @@
 }
 
 
-#pragma mark -
-#pragma mark Fetch events
 
 // Fetch all events happening in the next 24 hours
 - (NSMutableArray *)fetchEvents
@@ -185,8 +187,6 @@
 }
 
 
-#pragma mark -
-#pragma mark Add a new event
 
 // Display an event edit view controller when the user taps the "+" button.
 // A new event is added to Calendar when the user taps the "Done" button in the above view controller.
@@ -203,8 +203,7 @@
 }
 
 
-#pragma mark -
-#pragma mark EKEventEditViewDelegate
+
 
 // Overriding EKEventEditViewDelegate method to update event store according to user actions.
 - (void)eventEditViewController:(EKEventEditViewController *)controller
